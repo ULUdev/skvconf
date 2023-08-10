@@ -1,0 +1,6 @@
+a = 3
+b = "abc"
+c = true
+d {
+    e = false
+}
