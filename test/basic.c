@@ -1,4 +1,3 @@
-#include "parser.tab.h"
 #include "skvconf.h"
 #include <assert.h>
 #include <stdbool.h>

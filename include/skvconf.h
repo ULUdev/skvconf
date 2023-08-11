@@ -2,9 +2,6 @@
 #ifndef SKVCONF_SKVCONF_H
 #define SKVCONF_SKVCONF_H
 #include "skvconf_types.h"
-#include "parser.tab.h"
-#define YYSTYPE SKVCONFSTYPE
-#include "lexer.lex.h"
 
 /// parse a config file
 /// @param file the file to parse

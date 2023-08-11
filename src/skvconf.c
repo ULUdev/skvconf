@@ -1,8 +1,9 @@
 #include "skvconf.h"
 #include <stdio.h>
 #include <string.h>
-#include "lexer.lex.h"
 #include "parser.tab.h"
+#define YYSTYPE SKVCONFSTYPE
+#include "lexer.lex.h"
 
 #define streq(s1, s2) (strlen(s1) == strlen(s2) && strncmp(s1, s2, strlen(s1)) == 0)
 
