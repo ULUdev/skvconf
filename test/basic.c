@@ -46,6 +46,9 @@ int main(int argc, char **argv) {
   assert(g->type = SKVCONF_TYPE_BOOLEAN);
   assert(g->val.boolean == true);
 
+  skvconf_elm_t *non_group_member = skvconf_find_element(e, "a.v", NULL);
+  assert(!non_group_member);
+
   skvconf_elm_destroy(e);
   return 0;
 }
