@@ -1,4 +1,4 @@
-project('skvconf', 'c', license : 'MIT', version : '1.0.1', default_options : ['c_std=c11'])
+project('skvconf', 'c', license : 'MIT', version : '1.0.2', default_options : ['c_std=c11'])
 
 subdir('src')
 include = include_directories('include')
