@@ -3,4 +3,7 @@ b = "abc"
 c = true
 d {
     e = false
+    f {
+        g = true
+    }
 }

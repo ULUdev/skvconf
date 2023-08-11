@@ -10,12 +10,13 @@
 int skvconf_parse_file(const char *file, skvconf_elm_t **elm);
 
 /// find an element
-/// @param root the element to start searching at (`should be the one returned by
-/// skvconf_parse_file`)
+/// @param root the element to start searching at (`should be the one returned
+/// by skvconf_parse_file`)
 /// @param id the id to query by. `id` is a string, where sections are delimited
 /// by a period character.
 /// @param res a pointer to where the result of the operation will be written.
 /// If it is `NULL` it's ignored
 /// @return a pointer to the element
-skvconf_elm_t *skvconf_find_element(skvconf_elm_t *root, const char *id, int *res);
+skvconf_elm_t *skvconf_find_element(skvconf_elm_t *root, const char *id,
+                                    int *res);
 #endif

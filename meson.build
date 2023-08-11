@@ -14,8 +14,11 @@ if doxygen.found()
   doc = custom_target('doc', 
     output : 'doc',
     command : [doxygen,
-      '@INPUT@'],
-    input : meson.source_root() / 'Doxyfile')
+      '@INPUT0@'],
+    input : [meson.source_root() / 'Doxyfile',
+      meson.source_root() / 'README.md',
+      meson.source_root() / 'include' / 'skvconf.h',
+      meson.source_root() / 'include' / 'skvconf_types.h'])
 else
   warning('can\'t build documentation. If you don\'t need to build the documentation you can ignore this warning')
 endif

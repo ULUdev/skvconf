@@ -53,7 +53,7 @@ Your main interactions are going to be with three functions:
 All of them are made available through the `skvconf.h` header, which also
 includes a few other headers automatically.
 
-The definition for an `skvconf_elm_t` can be found in [`skvconf_types.h`](/include/skvconf_types.y):
+The definition for an `skvconf_elm_t` can be found in `skvconf_types.h`:
 ```c
 typedef struct skvconf_elm {
     skvconf_type_t type;
@@ -85,3 +85,20 @@ the union `val` in an element.
 - If a single key has been defined with multiple values, the last one is used,
   regardless of type (this is due to the find function exiting after finding
   the first element that matches and the parser returning the elements in reverse order).
+
+## Configuration file syntax
+A configuration file has a very basic syntax:
+```
+a = 3
+b = "abc"
+c = true
+d {
+    e = false
+}
+```
+
+It is made up of key-value pairs as well as groups, which are basically namespaces.
+In this example, `a`, `b` and `c` are simply key-value pairs accessible by
+their respective names. `d` is a group which means it cannot be found by the
+`skvconf_find_element` function and `e` is another key-value pair which is
+accessible as `d.e`. You can also have nested groups.
