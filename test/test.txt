@@ -5,5 +5,6 @@ d {
     e = false
     f {
         g = true
+        h = "a_b-c.d:e f; g"
     }
 }

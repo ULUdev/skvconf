@@ -40,6 +40,8 @@ bison_gen = generator(bison,
 sources += bison_gen.process(parser)
 sources += flex_gen.process(lexer)
 
+install_headers('include/skvconf.h')
+install_headers('include/skvconf_types.h')
 skvconf = library('skvconf', sources, include_directories : include, install : true)
 
 skvconf_dep = declare_dependency(include_directories : include, link_with : skvconf)

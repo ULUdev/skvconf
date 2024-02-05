@@ -25,8 +25,6 @@
 %code provides {
     extern int skvconflex(SKVCONFSTYPE *lval, void *s);
     int skvconferror(void *, void *, const char *);
-    // int skvconferror(const char *);
-    // int skvconferror(void *, const char*);
 }
 
 %token <num> NUM
